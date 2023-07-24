@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from "react";
+import CounterComponent from "./components/CounterComponent";
+import ButtonComponent from "./components/ButtonComponent";
+import DataFetchingComponent from "./components/DataFetchingComponent";
 import './App.css';
 
-function App() {
+
+const App = () => {
+  const handleClick = () => {
+    console.log("Button clicked!");
+    alert('first task is completed');
+    // Perform any specific action here
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>This is first task</h1>
+      <ButtonComponent label="Click Me" onClickHandler={handleClick}/>
+      <hr/>
+      <h1>This is second task</h1>
+      <CounterComponent />
+      <hr/>
+      <h1>This is third task</h1>
+      <DataFetchingComponent/>
     </div>
   );
-}
+};
 
 export default App;
