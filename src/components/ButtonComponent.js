@@ -5,6 +5,7 @@ const ButtonComponent = ({ label, onClickHandler }) => {
     <button onClick={onClickHandler}>
       {label}
     </button>
+    
   );
 };
 
